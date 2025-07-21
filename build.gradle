@@ -13,14 +13,17 @@ base {
 repositories {
 	mavenCentral()
 	maven {
+		url "https://cursemaven.com"
+	}
+
+	maven {
 		url = "https://api.modrinth.com/maven"
 	}
 	maven {
 		name "KosmX's maven"
 		url 'https://maven.kosmx.dev/'
 	}
-	maven {url 'https://maven.azuredoom.com/mods'
-	}
+	maven {url 'https://maven.azuredoom.com/mods' }
 	maven {
 		name = "FzzyMaven"
 		url = uri("https://maven.fzzyhmstrs.me/")
@@ -48,6 +51,7 @@ dependencies {
 	modImplementation "maven.modrinth:aaa-particles:1.21-1.4.9-fabric"
 	modImplementation "maven.modrinth:architectury-api:13.0.8+fabric"
 	modImplementation "me.fzzyhmstrs:fzzy_config:${project.fzzy_config_version}"
+
 	modImplementation "curse.maven:boundless-api-1310831:6795400"
 }
 

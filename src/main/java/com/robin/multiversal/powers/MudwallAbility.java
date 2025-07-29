@@ -16,6 +16,7 @@ import net.minecraft.util.math.Vec3d;
 
 
 public class MudwallAbility {
+
     public static void mudwall(PlayerEntity player) {
         if (player.getWorld().isClient) return;
         ServerWorld serverWorld = (ServerWorld) player.getWorld();
@@ -66,6 +67,6 @@ public class MudwallAbility {
                     serverWorld.playSound(null, blockPos, SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.BLOCKS, 1.0f, 1.0f);
                 }));
             }
+            }
         }
     }
-}

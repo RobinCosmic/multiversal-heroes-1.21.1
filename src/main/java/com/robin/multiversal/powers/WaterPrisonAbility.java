@@ -35,7 +35,7 @@ public class WaterPrisonAbility {
         ServerWorld serverWorld = (ServerWorld) player.getWorld();
 
         // Get target entity from crosshair within 5 to 35 blocks
-        Entity hit = getLookedAtEntity(player);
+        Entity hit = getLookedAtEntity(player, 5.0, 155.0);
         if (!(hit instanceof LivingEntity target)) return;
         if (target == player) return;
 
@@ -85,13 +85,15 @@ public class WaterPrisonAbility {
 
         // Trap effect loop
         DamageSource damageSource = serverWorld.getDamageSources().magic();
+        LivingEntity trapped = target;
 
         for (int i = 0; i < durationTicks; i += tickInterval) {
-            DelayedTaskManager.add(new DelayedTask(i, () -> {
-                target.damage(damageSource, damagePerTick);
-                target.setVelocity(Vec3d.ZERO);
-                target.velocityModified = true;
-                target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, tickInterval + 2, 6, true, false));
+            int delay = i;
+            DelayedTaskManager.add(new DelayedTask(delay, () -> {
+                trapped.damage(damageSource, damagePerTick);
+                trapped.setVelocity(Vec3d.ZERO);
+                trapped.velocityModified = true;
+                trapped.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, tickInterval + 2, 6, true, false));
             }));
         }
 
@@ -128,22 +130,22 @@ public class WaterPrisonAbility {
 
     //targeting helper method
     @Nullable
-    private static Entity getLookedAtEntity(PlayerEntity player) {
+    private static Entity getLookedAtEntity(PlayerEntity player, double minDistance, double maxDistance) {
         Vec3d start = player.getCameraPosVec(1.0F);
         Vec3d direction = player.getRotationVec(1.0F);
-        Vec3d end = start.add(direction.multiply(155.0));
+        Vec3d end = start.add(direction.multiply(maxDistance));
 
-        Box box = player.getBoundingBox().stretch(direction.multiply(155.0)).expand(35.0);
-        Entity hit = Objects.requireNonNull(ProjectileUtil.raycast(
+        Box box = player.getBoundingBox().stretch(direction.multiply(maxDistance)).expand(35.0);
+        Entity hit = ProjectileUtil.raycast(
                 player,
                 start,
                 end,
                 box,
                 e -> e instanceof LivingEntity && !e.isSpectator() && e.isAlive() && e != player,
-                155.0
-        )).getEntity();
+                maxDistance
+        ).getEntity();
 
-        if (hit != null && player.squaredDistanceTo(hit) >= 5.0 * 5.0) {
+        if (hit != null && player.squaredDistanceTo(hit) >= minDistance * minDistance) {
             return hit;
         }
         return null;

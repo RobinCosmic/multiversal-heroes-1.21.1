@@ -1,7 +1,7 @@
 package com.robin.multiversal;
 
 import com.boundless.networking.PayloadRegistry;
-import com.boundless.registry.HeroRegistry;
+import com.robin.multiversal.registry.HeroRegistry;
 import com.robin.multiversal.registry.SoundRegistry;
 import net.fabricmc.api.ModInitializer;
 
@@ -17,7 +17,7 @@ public class Multiversalheroes implements ModInitializer {
 	public void onInitialize() {
 		HeroRegistry.initialize();
 		//EntityRegistry.initialize();
-		PayloadRegistry.registerPayloads();
+		//PayloadRegistry.registerPayloads();
 		SoundRegistry.initialize();
 		LOGGER.info("Multiversal Heroes Initialized!");
 	}

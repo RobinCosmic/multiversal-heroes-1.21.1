@@ -1,7 +1,7 @@
 package com.robin.multiversal.powers;
 
-import com.boundless.BoundlessAPI;
 import com.boundless.util.AnimationUtils;
+import com.robin.multiversal.Multiversalheroes;
 import com.robin.multiversal.util.DelayedTask;
 import com.robin.multiversal.util.DelayedTaskManager;
 import net.minecraft.block.BlockState;
@@ -21,7 +21,7 @@ public class MudwallAbility {
         if (player.getWorld().isClient) return;
         ServerWorld serverWorld = (ServerWorld) player.getWorld();
         // Trigger animation
-        AnimationUtils.playAnimation(player, BoundlessAPI.identifier("mudwall"), 2.0f, false);
+        AnimationUtils.playAnimation(player, Multiversalheroes.identifier("mudwall"), 2.0f, false);
 
         // Determine where the wall should appear
         Vec3d lookVec = player.getRotationVec(1.0f).normalize();

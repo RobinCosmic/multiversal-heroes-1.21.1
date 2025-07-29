@@ -1,12 +1,12 @@
 package com.robin.multiversal.hero;
 
 import com.boundless.ability.AbilityLoadout;
-import com.robin.multiversal.Multiversalheroes;
-import com.robin.multiversal.powers.MultiversalAbilities;
 import com.boundless.hero.api.Hero;
 import com.boundless.hero.api.HeroData;
 import com.boundless.registry.DataComponentRegistry;
 import com.mojang.serialization.Codec;
+import com.robin.multiversal.Multiversalheroes;
+import com.robin.multiversal.powers.MultiversalAbilities;
 import net.minecraft.component.ComponentType;
 
 public class Naruto extends Hero {

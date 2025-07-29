@@ -1,10 +1,8 @@
 package com.robin.multiversal;
 
-import com.boundless.networking.PayloadRegistry;
 import com.robin.multiversal.registry.HeroRegistry;
 import com.robin.multiversal.registry.SoundRegistry;
 import net.fabricmc.api.ModInitializer;
-
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,8 +14,6 @@ public class Multiversalheroes implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		HeroRegistry.initialize();
-		//EntityRegistry.initialize();
-		//PayloadRegistry.registerPayloads();
 		SoundRegistry.initialize();
 		LOGGER.info("Multiversal Heroes Initialized!");
 	}

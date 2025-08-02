@@ -3,6 +3,8 @@
 	"package": "com.robin.multiversal.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
+		"PlayerPowerDataMixin",
+		"HeroArmorMixin",
 		"ExampleMixin"
 	],
 	"injectors": {

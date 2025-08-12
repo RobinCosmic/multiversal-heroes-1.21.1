@@ -2,6 +2,7 @@ package com.robin.multiversal.registry;
 
 
 import com.boundless.hero.api.Hero;
+import com.robin.multiversal.hero.Naruto;
 import com.robin.multiversal.powers.MeleeHero;
 import net.minecraft.entity.player.PlayerEntity;
 
@@ -13,10 +14,10 @@ public class HeroRegistry {
     private static final Map<String, Hero> HEROES_BY_ID = new HashMap<>();
     private static final Map<PlayerEntity, Hero> PLAYER_HEROES = new HashMap<>();
 
-    public static final Hero MELEE_HERO = new MeleeHero();
+    public static final Hero NARUTO = new Naruto();
 
     public static void initialize() {
-        registerHero(MELEE_HERO);
+        registerHero(NARUTO);
     }
 
     public static void registerHero(Hero hero) {

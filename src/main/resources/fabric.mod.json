@@ -18,6 +18,9 @@
 		"main": [
 			"com.robin.multiversal.Multiversalheroes"
 		],
+		"client": [
+			"com.robin.multiversal.client.MultiversalClient"
+		],
 		"fabric-datagen": [
 			"com.robin.multiversal.MultiversalheroesDataGenerator"
 		]

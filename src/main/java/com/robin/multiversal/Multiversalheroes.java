@@ -1,10 +1,13 @@
 package com.robin.multiversal;
 
 import com.boundless.networking.PayloadRegistry;
-import com.robin.multiversal.item.ItemRegistry;
+//import com.robin.multiversal.item.ItemRegistry;
+import com.robin.multiversal.registry.EntityRegistry;
 import com.robin.multiversal.registry.HeroRegistry;
 import com.robin.multiversal.registry.SoundRegistry;
+import com.robin.multiversal.util.DelayedTaskManager;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,9 +21,14 @@ public class Multiversalheroes implements ModInitializer {
 		HeroRegistry.initialize();
 		//EntityRegistry.initialize();
 		//PayloadRegistry.registerPayloads();
-		ItemRegistry.registerModItems();
+		EntityRegistry.register();
+		//ItemRegistry.registerModItems();
 		SoundRegistry.initialize();
 		LOGGER.info("Multiversal Heroes Initialized!");
+
+		ServerTickEvents.END_SERVER_TICK.register(server -> {
+			DelayedTaskManager.tickAll();
+		});
 	}
 
 	public static Identifier identifier(String name) {

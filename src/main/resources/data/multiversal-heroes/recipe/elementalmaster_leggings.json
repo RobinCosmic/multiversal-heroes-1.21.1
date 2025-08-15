@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "   ",
-    "C C",
-    "A A"
+    "CCC",
+    "A C",
+    "C C"
   ],
   "key": {
     "A": { "item": "minecraft:black_wool" },
     "C": { "item": "minecraft:orange_wool" }
   },
   "result": {
-    "id": "boundless:naruto_boots",
+    "id": "boundless:elementalmaster_leggings",
     "count": 1
   }
 }

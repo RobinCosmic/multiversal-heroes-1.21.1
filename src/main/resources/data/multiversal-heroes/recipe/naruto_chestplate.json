@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A A",
+    "ADA",
+    "CCC"
+  ],
+  "key": {
+    "A": { "item": "minecraft:black_wool" },
+    "D": { "item": "minecraft:white_wool" },
+    "C": { "item": "minecraft:orange_wool"}
+  },
+  "result": {
+    "id": "boundless:naruto_chestplate",
+    "count": 1
+  }
+}

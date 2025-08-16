@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "   ",
-    "C C",
-    "A A"
+    "M M",
+    "D D",
+    "D D"
   ],
   "key": {
-    "A": { "item": "minecraft:black_wool" },
-    "C": { "item": "minecraft:orange_wool" }
+    "D": { "item": "minecraft:white_wool" },
+    "M": { "item": "minecraft:packed_mud"}
   },
   "result": {
-    "id": "boundless:elementalmaster_boots",
+    "id": "boundless:ElementalMaster_boots",
     "count": 1
   }
 }

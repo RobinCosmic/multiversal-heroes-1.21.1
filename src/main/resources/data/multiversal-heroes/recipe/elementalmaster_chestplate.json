@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "A A",
-    "ADA",
-    "CCC"
+    "DFD",
+    "DDD",
+    "AAA"
   ],
   "key": {
     "A": { "item": "minecraft:black_wool" },
     "D": { "item": "minecraft:white_wool" },
-    "C": { "item": "minecraft:orange_wool"}
+    "F": { "item": "minecraft:flint_and_steel"}
   },
   "result": {
-    "id": "boundless:elementalmaster_chestplate",
+    "id": "boundless:ElementalMaster_chestplate",
     "count": 1
   }
 }

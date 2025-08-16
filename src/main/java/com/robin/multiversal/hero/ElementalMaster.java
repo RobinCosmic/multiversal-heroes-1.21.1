@@ -23,9 +23,9 @@ public class ElementalMaster extends Hero {
 
         this.heroData = HeroData
                 .builder()
-                .name("elementalmaster")
+                .name("ElementalMaster")
                 .displayName("Elemental Master")
-                .textureIdentifier(Multiversalheroes.textureID("ElementalMaster"))
+                .textureIdentifier(Multiversalheroes.textureID("elementalmaster"))
                 .defaultAbilityLoadout(ABILITY_LOADOUTS.get("ElementalMaster"))
                 .build();
 

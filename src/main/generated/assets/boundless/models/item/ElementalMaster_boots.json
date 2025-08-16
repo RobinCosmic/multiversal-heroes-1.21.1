@@ -1,0 +1,6 @@
+{
+  "parent": "boundless:item/boots",
+  "textures": {
+    "layer0": "multiversal-heroes:item/hero/elementalmaster"
+  }
+}

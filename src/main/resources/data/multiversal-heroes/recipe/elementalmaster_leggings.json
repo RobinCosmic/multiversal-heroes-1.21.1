@@ -1,16 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "CCC",
-    "A C",
-    "C C"
+    "DDD",
+    "AWA",
+    "D D"
   ],
   "key": {
     "A": { "item": "minecraft:black_wool" },
-    "C": { "item": "minecraft:orange_wool" }
+    "D": { "item": "minecraft:white_wool" },
+    "W": { "item": "minecraft:water_bucket"}
   },
   "result": {
-    "id": "boundless:elementalmaster_leggings",
+    "id": "boundless:ElementalMaster_leggings",
     "count": 1
   }
 }

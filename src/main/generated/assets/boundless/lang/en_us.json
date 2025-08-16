@@ -1,0 +1,19 @@
+{
+  "boundless.damage_resistance": "Damage Resistance",
+  "category.boundless.controls": "Boundless Controls",
+  "effect.boundless.invulnerability": "Invulnerability",
+  "item.boundless.ElementalMaster_boots": "Elemental Master's Boots",
+  "item.boundless.ElementalMaster_chestplate": "Elemental Master's Chestplate",
+  "item.boundless.ElementalMaster_helmet": "Elemental Master's Helmet",
+  "item.boundless.ElementalMaster_leggings": "Elemental Master's Leggings",
+  "item.boundless.melee_hero_boots": "Melee hero's Boots",
+  "item.boundless.melee_hero_chestplate": "Melee hero's Chestplate",
+  "item.boundless.melee_hero_helmet": "Melee hero's Helmet",
+  "item.boundless.melee_hero_leggings": "Melee hero's Leggings",
+  "itemGroup.boundless.boundless_group": "Boundless",
+  "key.boundless.ability_five": "Ability 5",
+  "key.boundless.ability_four": "Ability 4",
+  "key.boundless.ability_one": "Ability 1",
+  "key.boundless.ability_three": "Ability 3",
+  "key.boundless.ability_two": "Ability 2"
+}

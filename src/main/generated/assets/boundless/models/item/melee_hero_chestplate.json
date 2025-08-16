@@ -1,0 +1,6 @@
+{
+  "parent": "boundless:item/chestplate",
+  "textures": {
+    "layer0": "boundless:item/hero/meleehero"
+  }
+}

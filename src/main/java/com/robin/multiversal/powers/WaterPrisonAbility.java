@@ -2,12 +2,9 @@ package com.robin.multiversal.powers;
 
 import com.boundless.BoundlessAPI;
 import com.boundless.util.AnimationUtils;
-import com.robin.multiversal.Multiversalheroes;
 import com.robin.multiversal.util.DelayedTask;
 import com.robin.multiversal.util.DelayedTaskManager;
 import com.robin.multiversal.util.EffekUtils;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -15,20 +12,14 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileUtil;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.state.property.Property;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.HashSet;
-import java.util.Set;
 
 public class WaterPrisonAbility {
 
@@ -50,8 +41,8 @@ public class WaterPrisonAbility {
                     Identifier.of("multiversal-heroes", "water_prison"),
                     target,
                     new Vec3d(1, 1, 1),
-                    Vec3d.ZERO
-            );
+                    Vec3d.ZERO,
+                    new Vec3d(0, -1, 0));
 
             int tickInterval = 10;
             int durationTicks = 40;

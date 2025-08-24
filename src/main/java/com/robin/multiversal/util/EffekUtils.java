@@ -36,7 +36,7 @@ public class EffekUtils {
         return instance;
     }
 
-    public static ParticleEmitterInfo playBoundEffect(Identifier identifier, Entity user, Vec3d scale, Vec3d rotation) {
+    public static ParticleEmitterInfo playBoundEffect(Identifier identifier, Entity user, Vec3d scale, Vec3d rotation, Vec3d vec3d) {
         ParticleEmitterInfo instance = (new ParticleEmitterInfo(identifier)).clone().scale((float)scale.x, (float)scale.y, (float)scale.z).bindOnEntity(user);
         AAALevel.addParticle(user.getWorld(), true, instance);
         return instance;

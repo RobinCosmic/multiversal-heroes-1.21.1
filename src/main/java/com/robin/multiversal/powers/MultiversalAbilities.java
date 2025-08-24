@@ -25,4 +25,11 @@ public class MultiversalAbilities extends Hero {
             .abilityID(Multiversalheroes.identifier("substitution"))
             .abilityIcon(Multiversalheroes.hudPNG("substitution"))
             .build();
+
+    public static Ability FLAMETHROWER = Ability.builder()
+            .abilityConsumer(FlamethrowerAbility::useFlamethrower)
+            .cooldown(120)
+            .abilityID(Multiversalheroes.identifier("flamethrower"))
+            .abilityIcon(Multiversalheroes.hudPNG("flamethrower"))
+            .build();
 }

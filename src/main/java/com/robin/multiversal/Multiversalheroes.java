@@ -25,6 +25,7 @@ public class Multiversalheroes implements ModInitializer {
 		EntityRegistry.register();
 		MultiversalItems.init();
 		SoundRegistry.initialize();
+
 		LOGGER.info("Multiversal Heroes Initialized!");
 
 		ServerTickEvents.END_SERVER_TICK.register(server -> {

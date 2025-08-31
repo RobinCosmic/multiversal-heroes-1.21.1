@@ -34,7 +34,7 @@ public class WaterPrisonAbility {
             if (target == player) return;
 
             // Player animation
-            AnimationUtils.playAnimation(player, BoundlessAPI.identifier("jab"), 1.0f, false);
+            AnimationUtils.playSyncedAnimation(player, BoundlessAPI.identifier("jab"));
 
             // Play bound Effekseer water prison effect
             EffekUtils.playBoundEffect(
@@ -42,7 +42,7 @@ public class WaterPrisonAbility {
                     target,
                     new Vec3d(1, 1, 1),
                     Vec3d.ZERO,
-                    new Vec3d(0, -1, 0));
+                    String.valueOf(new Vec3d(0, -1, 0)));
 
             int tickInterval = 10;
             int durationTicks = 40;

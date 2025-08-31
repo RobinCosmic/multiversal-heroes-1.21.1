@@ -32,4 +32,12 @@ public class MultiversalAbilities extends Hero {
             .abilityID(Multiversalheroes.identifier("flamethrower"))
             .abilityIcon(Multiversalheroes.hudPNG("flamethrower"))
             .build();
+
+    public static Ability SUPER_JUMP = Ability.builder()
+            .abilityConsumer(SuperJumpAbility::superJump)
+            .cooldown(40) // short cooldown since charging already slows it
+            .abilityID(Multiversalheroes.identifier("super_jump"))
+            .abilityIcon(Multiversalheroes.hudPNG("super_jump"))
+            .build();
+
 }

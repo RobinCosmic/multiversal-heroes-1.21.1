@@ -21,7 +21,7 @@ public class MudwallAbility {
 
         ServerWorld serverWorld = (ServerWorld) player.getWorld();
 
-        AnimationUtils.playAnimation(player, Multiversalheroes.identifier("mudwall"), 2.0f, false);
+        AnimationUtils.playSyncedAnimation(player, Multiversalheroes.identifier("mudwall"));
 
         Vec3d lookVec = player.getRotationVec(1.0f).normalize();
         BlockPos playerPos = player.getBlockPos();

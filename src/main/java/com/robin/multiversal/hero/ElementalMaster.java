@@ -17,9 +17,8 @@ public class ElementalMaster extends Hero {
 
     public ElementalMaster() {
         AbilityLoadout loadout = AbilityLoadout.builder()
-                //.ability("key.boundless.ability_one", MultiversalAbilities.WATER_PRISON)
-                .ability("key.boundless.ability_one", MultiversalAbilities.FLAMETHROWER)
-                //.ability("key.jump", MultiversalAbilities.SUPER_JUMP)
+                .ability("key.boundless.ability_one", MultiversalAbilities.WATER_PRISON)
+                //.ability("key.boundless.ability_one", MultiversalAbilities.FLAMETHROWER)
                 .ability("key.boundless.ability_two", MultiversalAbilities.MUD_WALL)
                 .ability("key.boundless.ability_three", MultiversalAbilities.SUBSTITUTION)
                 .build();

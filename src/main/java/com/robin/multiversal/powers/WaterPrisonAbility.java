@@ -42,7 +42,7 @@ public class WaterPrisonAbility {
                     target,
                     new Vec3d(1, 1, 1),
                     Vec3d.ZERO,
-                    String.valueOf(new Vec3d(0, -1, 0)));
+            String.valueOf(new Vec3d(0, -1, 0)));
 
             int tickInterval = 10;
             int durationTicks = 40;

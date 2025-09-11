@@ -24,9 +24,10 @@ import java.util.UUID;
 public class SuperJumpAbility {
 
     private static final int ANIMATION_DURATION = 0; // 4 seconds (20 ticks per sec)
-    private static final double JUMP_HEIGHT = 15.0;   // blocks
+    private static final double JUMP_HEIGHT = 150.0;   // blocks
 
     public static void superJump(PlayerEntity player) {
+
         if (player.getWorld().isClient) return;
 
         ServerWorld serverWorld = (ServerWorld) player.getWorld();
